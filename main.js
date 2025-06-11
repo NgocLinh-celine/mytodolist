@@ -37,10 +37,8 @@ window.addEventListener('load', () => {
     filteredList.forEach((item, index) => {
       const time = document.createElement('span')
       const date = new Date(item.createAt)
-      time.innerText = date.toLocaleDateString('vi-VN', {
-        hour: '2-digit', minute: '2-digit',
-        day: '2-digit', month: '2-digit', year: 'numeric'
-      })
+      time.innerText = `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`
+ 
       time.style.fontSize = '1.2rem'
       time.style.color = '#666'
 
