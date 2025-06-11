@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todos</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>todo</h1>
+
+    <form id="form-add">
+      <input type="text" id="input-text" />
+      <button type="submit">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </form>
+
+    <div class="info">
+      <p>Tổng có <span id="countAll">0</span> nhiệm vụ.</p>
+      <p>Đã hoàn thành <span id="countComplete">0</span> nhiệm vụ.</p>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">Tất cả</button>
+      <button data-filter="active" class="filter-btn">Chưa xong</button>
+      <button data-filter="completed" class="filter-btn">Đã xong</button>
+    </div>
+
+    <div class="list" id="todos"></div>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+
+</html>
